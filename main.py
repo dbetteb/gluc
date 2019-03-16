@@ -30,7 +30,7 @@ class GlucConverter:
     filename: str
     formula: List[float] = field(default_factory=lambda : [1/28.7, 46.7/28.7])
 
-    
+    @property
     def getgluc(self) -> List:
         self.gluc = loadgluc(self.filename)
 
